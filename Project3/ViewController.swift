@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
+    @IBOutlet weak var sendMailButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,12 @@ class ViewController: UIViewController {
         messageLabel.hidden = false
         messageLabel.text = enterNameTextField.text
         enterNameTextField.resignFirstResponder()
+        messageLabel.textColor = UIColor.redColor()
         helloLabel.text = enterMessageTextField.text
         helloLabel.hidden = false
+        
+        sendMailButton.setTitle("Mail Sent Already", forState: UIControlState.Normal)
+        
     }
 
 }
